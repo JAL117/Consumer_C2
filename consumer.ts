@@ -23,7 +23,7 @@ async function getEvent() {
             console.log(`Mensaje recibido: ${mensaje.content.toString()}`);
             try {
                 const id = Number(mensaje.content);
-                const response = await axios.post('http://localhost:9000/history',{id_user:id, registration:"Usuario Registrado"});
+                const response = await axios.post('https://api-2-c2.onrender.com/history',{id_user:id, registration:"Usuario Registrado"});
                 
             } catch (error) {
                 console.log("Error sending to API");   
